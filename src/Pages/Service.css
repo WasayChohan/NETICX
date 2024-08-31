@@ -1,0 +1,84 @@
+.service {
+  width: 100%;
+  height: 600px;
+  margin-top: 60px;
+  margin-bottom: 10px;
+  background: radial-gradient(
+    205.98% 205.98% at 50% 37.49%,
+    #d80e0e 0%,
+    #000000 100%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-h1 {
+  width: 308px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.sub-service {
+  width: 95%;
+  position: relative;
+  margin: auto;
+  /* margin: 70px 0px 50px 0px; */
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 330px;
+  height: 290px;
+  padding: 0px 15px 0px 10px;
+  border-radius: 25px;
+  border: 6px solid #d80e0e;
+  background-color: #ffffff;
+  padding: 10px;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+
+  /* border: linear-gradient(225deg, #ff002e 0%, #808080 100%); */
+}
+.slick-slide.slick-center .box {
+  transform: translateY(20px); /* Move the slide down */
+  z-index: 2; /* Bring it on top of other slides */
+}
+
+.slick-slide {
+  margin: 0 30px;
+}
+.slick-track {
+  height: 180px;
+}
+.current-slide {
+  opacity: 0;
+}
+.box11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  border: 1px solid black;
+}
+.box1 {
+  width: 34px;
+  height: 34px;
+}
+
+.p1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+}
+
+.p2 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #718096;
+}

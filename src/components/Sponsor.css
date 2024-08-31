@@ -1,0 +1,43 @@
+.sponsor {
+  width: 100%;
+  height: auto;
+  background: #f7f7fa;
+  border-top: 1px solid #e7daed;
+  border-bottom: 1px solid #e7daed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-top: 70px;
+}
+
+.sponsor-ul {
+  width: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 30px 0;
+}
+
+.sponsor-li {
+  list-style-type: none;
+}
+.sponsors-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  .sponsor {
+    margin: 20px 0;
+  }
+
+  /* .sponsor-ul {
+    width: 100%;
+  } */
+}
