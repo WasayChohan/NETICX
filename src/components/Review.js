@@ -8,7 +8,19 @@ import img17 from "../assets/Images/img17.png";
 
 import starimg from "../assets/Images/starimg.png";
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 function Review() {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    centerMode: true,
+  };
   const reviews = [
     {
       id: 1,
@@ -63,6 +75,7 @@ function Review() {
           </p>
         </div>
         <div className="review-show">
+          {/* <Slider {...settings}> */}
           {reviews.map((reviews) => (
             <div className="reviews" key={reviews.id}>
               <img
@@ -84,6 +97,7 @@ function Review() {
               <p className="reviews-p2"> {reviews.reviews_p2} </p>
             </div>
           ))}
+          {/* </Slider> */}
         </div>
       </div>
     </div>

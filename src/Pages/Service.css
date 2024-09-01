@@ -1,6 +1,6 @@
 .service {
   width: 100%;
-  height: 600px;
+  height: auto;
   margin-top: 60px;
   margin-bottom: 10px;
   background: radial-gradient(
@@ -14,49 +14,48 @@
 }
 
 .service-h1 {
-  width: 308px;
   margin: auto;
   color: #ffffff;
 }
 
 .sub-service {
-  width: 95%;
-  position: relative;
-  margin: auto;
-  /* margin: 70px 0px 50px 0px; */
-  /* display: flex;
-  flex-direction: column; */
+  width: 100%;
+  margin: 50px 0px 50px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .box {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  width: 330px;
+  max-width: 330px;
   height: 290px;
   padding: 0px 15px 0px 10px;
   border-radius: 25px;
   border: 6px solid #d80e0e;
   background-color: #ffffff;
   padding: 10px;
-  transition: transform 0.3s ease, z-index 0.3s ease;
 
-  /* border: linear-gradient(225deg, #ff002e 0%, #808080 100%); */
-}
-.slick-slide.slick-center .box {
-  transform: translateY(20px); /* Move the slide down */
-  z-index: 2; /* Bring it on top of other slides */
+  border: linear-gradient(225deg, #ff002e 0%, #808080 100%);
+
+  transition: transform 0.3s ease-in-out;
 }
 
 .slick-slide {
-  margin: 0 30px;
+  margin: 0 20px;
 }
+
+.slick-current {
+  transform: translateY(40px);
+}
+
 .slick-track {
-  height: 180px;
+  height: 400px;
 }
-.current-slide {
-  opacity: 0;
-}
+
+/* slick-slide slick-active slick-center slick-current */
+
 .box11 {
   display: flex;
   justify-content: center;
@@ -75,10 +74,19 @@
   font-size: 20px;
   font-weight: 600;
   color: linear-gradient(225deg, #f76680 0%, #57007b 100%);
+  margin-top: 30px;
 }
 
 .p2 {
+  font-size: calc(0.8rem + 0.2vw);
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 14px;
   font-weight: 400;
   color: #718096;
+  margin-top: 40px;
+}
+
+.slick-next {
+  display: none !important;
 }

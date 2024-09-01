@@ -1,4 +1,3 @@
-import React, { useRef } from "react";
 import "./Service.css";
 import boximg1 from "../assets/Images/boximg1.png";
 import boximg2 from "../assets/Images/boximg2.png";
@@ -12,71 +11,42 @@ function Service() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 3,
-    centerMode: true, // Enable center mode if you want centered slide effect
+    centerMode: true,
   };
+  const box = [
+    {
+      img: boximg1,
+      p1: "Mobile App Development",
+      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is number one marketing asset because we live in a digital age.",
+    },
+    {
+      img: boximg2,
+      p1: "Web Design & Development",
+      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is number one marketing asset because we live in a digital age.",
+    },
+    {
+      img: boximg3,
+      p1: "Software Testing Service",
+      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is number one marketing asset because we live in a digital age.",
+    },
+  ];
   return (
     <div className="service">
       <h1 className="service-h1"> Service We Offer</h1>
 
       <div className="sub-service">
         <Slider {...settings}>
-          <div className="box">
-            <div className="box11">
-              <img src={boximg1} alt="" className="box1" />
+          {box.map((box, index) => (
+            <div className="box" key={index}>
+              <div className="box11">
+                <img src={box.img} alt="" className="box1" />
+              </div>
+              <p className="p1"> {box.p1} </p>
+              <p className="p2">{box.p2}</p>
             </div>
-            <p className="p1">Software Testing Service</p>
-            <p className="p2">
-              A Website is an extension of yourself and we can help you to
-              express it properly. Your website is your number one marketing
-              asset because we live in a digital age.
-            </p>
-          </div>
-          <div className="box">
-            <div className="box11">
-              <img src={boximg1} alt="" className="box1" />
-            </div>
-            <p className="p1">Software Testing Service</p>
-            <p className="p2">
-              A Website is an extension of yourself and we can help you to
-              express it properly. Your website is your number one marketing
-              asset because we live in a digital age.
-            </p>
-          </div>
-          <div className="box">
-            <div className="box11">
-              <img src={boximg1} alt="" className="box1" />
-            </div>
-            <p className="p1">Software Testing Service</p>
-            <p className="p2">
-              A Website is an extension of yourself and we can help you to
-              express it properly. Your website is your number one marketing
-              asset because we live in a digital age.
-            </p>
-          </div>
-          <div className="box">
-            <div className="box11">
-              <img src={boximg1} alt="" className="box1" />
-            </div>
-            <p className="p1">Software Testing Service</p>
-            <p className="p2">
-              A Website is an extension of yourself and we can help you to
-              express it properly. Your website is your number one marketing
-              asset because we live in a digital age.
-            </p>
-          </div>
-          <div className="box">
-            <div className="box11">
-              <img src={boximg1} alt="" className="box1" />
-            </div>
-            <p className="p1">Software Testing Service</p>
-            <p className="p2">
-              A Website is an extension of yourself and we can help you to
-              express it properly. Your website is your number one marketing
-              asset because we live in a digital age.
-            </p>
-          </div>
+          ))}
         </Slider>
       </div>
     </div>

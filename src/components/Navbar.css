@@ -7,6 +7,7 @@
 
   padding: 5px 25px;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .logo {
@@ -47,18 +48,19 @@ a {
 }
 .menu_icon {
   display: none;
+  z-index: 10;
 }
 
 @media screen and (max-width: 768px) {
   .nav.open {
-    justify-content: center;
-    align-items: center;
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 50px;
-    margin-left: 40px;
-    padding: 50px;
+
+    justify-content: center;
+    align-items: center;
+    margin: auto 0;
   }
 
   .menu_icon {
@@ -71,25 +73,20 @@ a {
     flex-direction: column;
     align-items: center;
     margin: 30px 0 30px 0;
-  }
-
-  .nav {
-    display: none;
-    height: 100vh;
-    max-height: 600px;
+    gap: 30px;
   }
 }
 
 @media (max-width: 1042px) {
   .nav.open {
-    justify-content: center;
-    align-items: center;
-    display: flex !important;
+    width: 100%;
+    display: flex;
     flex-direction: column;
     position: fixed;
     top: 50px;
-    margin-left: 40px;
-    padding: 50px;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
   }
 
   .menu_icon {
@@ -106,7 +103,6 @@ a {
 
   .nav {
     display: none;
-    height: 100vh;
-    max-height: 600px;
+    height: auto;
   }
 }
