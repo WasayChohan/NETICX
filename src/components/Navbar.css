@@ -28,8 +28,8 @@
   cursor: pointer;
 }
 a {
-  text-decoration: none;
-  color: #000000;
+  text-decoration: none !important;
+  color: #000000 !important;
   cursor: pointer;
 }
 .active {
