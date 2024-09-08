@@ -1,8 +1,6 @@
 import React from "react";
 import "./Service.css";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import boximg1 from "../assets/Images/boximg1.png";
 import boximg2 from "../assets/Images/boximg2.png";
@@ -13,17 +11,37 @@ function Service() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    arrows: false,
+    centerMode: true,
+    centerPadding: "0px",
+
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1424,
         settings: {
-          dots: true,
-          infinite: true,
-          speed: 500,
           slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1124,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
           slidesToScroll: 1,
+          initialSlide: 2,
         },
       },
     ],
@@ -37,22 +55,22 @@ function Service() {
     },
     {
       img: boximg2,
-      p1: "Mobile App Development",
+      p1: "Software Testing Service",
       p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
     },
     {
       img: boximg3,
-      p1: "Mobile App Development",
+      p1: "Web Design & Development",
       p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
     },
     {
       img: boximg2,
-      p1: "Mobile App Development",
+      p1: "Software Testing Service",
       p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
     },
     {
       img: boximg3,
-      p1: "Mobile App Development",
+      p1: "Web Design & Development",
       p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
     },
   ];

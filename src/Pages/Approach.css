@@ -123,8 +123,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: -62px;
+  margin-bottom: -45px;
   margin-left: -50px;
+  position: sticky;
 }
 
 .top-lines {
@@ -140,8 +141,9 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-top: -62px;
+  margin-top: -45px;
   margin-right: -45px;
+  position: sticky;
 }
 
 .bottom-lines {
@@ -151,7 +153,7 @@
   border: none;
 }
 
-@media (max-width: 1217px) {
+@media (max-width: 1310px) {
   .develop-container {
     height: auto;
 
