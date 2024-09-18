@@ -3,7 +3,7 @@ import "./Products.css";
 import img18 from "../assets/Images/img18.png";
 import { ArrowForwardIos } from "@mui/icons-material";
 
-function Products() {
+function Products(props) {
   const product = [
     {
       id: 1,
@@ -32,7 +32,7 @@ function Products() {
   ];
 
   return (
-    <div className="products">
+    <div className="products" id={props.id}>
       <div className="product-color-line"></div>
       <h1 className="product-h1">Our Products</h1>
 

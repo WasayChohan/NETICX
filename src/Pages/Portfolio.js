@@ -3,7 +3,7 @@ import "./Portfolio.css";
 import { useState } from "react";
 import portfolioimg from "../assets/Images/portfolioimg.png";
 
-function Portfolio() {
+function Portfolio(props) {
   const images = [
     { src: require("../assets/Images/techimg1.png"), item: "web_dev" },
     { src: require("../assets/Images/techimg2.png"), item: "web_dev" },
@@ -47,7 +47,7 @@ function Portfolio() {
       : null;
 
   return (
-    <div className="portfolio">
+    <div className="portfolio" id={props.id}>
       <div
         className="fortfolioimg"
         style={{

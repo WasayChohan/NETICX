@@ -8,36 +8,39 @@ import img9 from "../assets/Images/img9.png";
 import img10 from "../assets/Images/img10.png";
 import img11 from "../assets/Images/img11.png";
 import img12 from "../assets/Images/img12.png";
+import Marquee from "react-fast-marquee";
 
 function Sponsor() {
   return (
     <div className="sponsor">
-      <ul className="sponsor-ul">
-        <li className="sponsor-li">
-          <img src={img5} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img6} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img7} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img8} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img9} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img10} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img11} alt="" className="sponsors-img" />
-        </li>
-        <li className="sponsor-li">
-          <img src={img12} alt="" className="sponsors-img" />
-        </li>
-      </ul>
+      <Marquee>
+        <ul className="sponsor-ul">
+          <li className="sponsor-li">
+            <img src={img5} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img6} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img7} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img8} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img9} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img10} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img11} alt="" className="sponsors-img" />
+          </li>
+          <li className="sponsor-li">
+            <img src={img12} alt="" className="sponsors-img" />
+          </li>
+        </ul>
+      </Marquee>
     </div>
   );
 }

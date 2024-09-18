@@ -2,9 +2,9 @@ import React from "react";
 import "./Approach.css";
 import cupimg from "../assets/Images/cupimg.png";
 
-function Development() {
+function Development(props) {
   return (
-    <div className="development">
+    <div className="development" id={props.id}>
       <div className="development-heading">
         <div className="development-color-line"></div>
         <h1 className="development-h1">

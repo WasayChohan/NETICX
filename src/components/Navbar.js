@@ -1,14 +1,13 @@
-// import logo from "../Images/logo.png";
+import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/Images/logo.png";
-
 import "./Navbar.css";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-// import { Link } from "react-scroll";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Get the current location
+  const navigate = useNavigate(); // For programmatic navigation
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -17,55 +16,79 @@ function Header() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const handleNavClick = (path, id, e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      // If on home page, scroll to the section
+      handleScroll(id);
+    } else {
+      // Navigate to home page first and then scroll
+      navigate("/");
+      setTimeout(() => handleScroll(id), 300); // Scroll after navigating to home
+    }
+    closeMenu();
+  };
+
   return (
     <div>
       <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
         <div className="logo">
-          <img src={logo} alt="" width="230px" height="88px" />
+          <img src={logo} alt="Logo" width="230px" height="88px" />
         </div>
 
         <ul className="navbar-ul">
           <li className="navbar-li">
-            {" "}
-            <NavLink onClick={closeMenu} to={"/"}>
-              {" "}
+            <NavLink to="/" onClick={(e) => handleNavClick("/", "home", e)}>
               Home
-            </NavLink>{" "}
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink onClick={closeMenu} to={"/service"}>
-              {" "}
+            <NavLink
+              to="/service"
+              onClick={(e) => handleNavClick("/", "service", e)}
+            >
               Services
-            </NavLink>{" "}
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink onClick={closeMenu} to={"/whoweare"}>
-              {" "}
+            <NavLink
+              to="/whoweare"
+              onClick={(e) => handleNavClick("/", "whoweare", e)}
+            >
               Who We Are
-            </NavLink>{" "}
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink onClick={closeMenu} to={"/products"}>
-              {" "}
+            <NavLink
+              to="/products"
+              onClick={(e) => handleNavClick("/", "products", e)}
+            >
               Products
-            </NavLink>{" "}
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink onClick={closeMenu} to={"/approach"}>
-              {" "}
+            <NavLink
+              to="/approach"
+              onClick={(e) => handleNavClick("/", "approach", e)}
+            >
               Approach
-            </NavLink>{" "}
+            </NavLink>
           </li>
           <li>
-            {" "}
-            <NavLink onClick={closeMenu} to={"/portfolio"}>
-              {" "}
+            <NavLink to="/portfolio" onClick={closeMenu}>
               Portfolio
-            </NavLink>{" "}
+            </NavLink>
           </li>
         </ul>
 

@@ -6,16 +6,17 @@ import boximg1 from "../assets/Images/boximg1.png";
 import boximg2 from "../assets/Images/boximg2.png";
 import boximg3 from "../assets/Images/boximg3.png";
 
-function Service() {
+function Service(props) {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
     centerMode: true,
-    centerPadding: "0px",
+    centerPadding: "150px",
+
+    arrows: false,
 
     responsive: [
       {
@@ -25,6 +26,7 @@ function Service() {
           slidesToScroll: 3,
           infinite: true,
           dots: true,
+          centerPadding: "0",
         },
       },
       {
@@ -34,6 +36,7 @@ function Service() {
           slidesToScroll: 2,
           infinite: true,
           dots: true,
+          centerPadding: "0",
         },
       },
       {
@@ -42,6 +45,7 @@ function Service() {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
+          centerPadding: "0",
         },
       },
     ],
@@ -76,7 +80,7 @@ function Service() {
   ];
 
   return (
-    <div className="service">
+    <div className="service" id={props.id}>
       <h1 className="service-h1">Services We Offer</h1>
       <div className="sub-service">
         <Slider {...settings}>

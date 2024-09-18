@@ -10,7 +10,7 @@
 }
 
 .portfolio-heading {
-  width: auto;
+  width: 500px;
   position: relative;
   top: calc(50% - 100px);
   left: 80px;
@@ -198,6 +198,7 @@
     height: 500px;
   }
   .portfolio-heading {
+    width: 300px;
     top: calc(50% - 80px);
     left: 20px;
   }

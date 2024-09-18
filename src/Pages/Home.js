@@ -1,4 +1,5 @@
 import React from "react";
+
 import "./Home.css";
 import img1 from "../assets/Images/img1.png";
 import Service from "./Service.js";
@@ -13,7 +14,7 @@ import Approach from "./Approach.js";
 
 function Home() {
   return (
-    <div className="home">
+    <div className="home" id="home">
       <div className="home_layout">
         <div className="home_text">
           <p className="home_p">
@@ -38,15 +39,15 @@ function Home() {
         </div>
       </div>
 
-      <Service />
-      <WhoWeAre />
+      <Service id="service" />
+      <WhoWeAre id="whoweare" />
       <Sponsor />
       <Review />
-      <Products />
+      <Products id="products" />
       <Design />
       <Success />
       <TechStack />
-      <Approach />
+      <Approach id="approach" />
     </div>
   );
 }

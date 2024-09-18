@@ -3,9 +3,9 @@ import "./WhoWeAre.css";
 import img4 from "../assets/Images/img4.jpg";
 import { ArrowForward } from "@mui/icons-material";
 
-function WhoWeAre() {
+function WhoWeAre(props) {
   return (
-    <div className="whoweare">
+    <div className="whoweare" id={props.id}>
       <div className="whoweare-body">
         <div className="are-text-area">
           <div className="color-line"></div>
