@@ -70,7 +70,6 @@
 }
 
 .stack-img {
-  height: auto;
   justify-content: center;
   margin-bottom: 30px;
 }
@@ -86,6 +85,10 @@
     gap: 30px;
   }
 
+  .stack-ul {
+    width: 95%;
+  }
+
   .techstck-heading {
     width: 95%;
   }
@@ -93,14 +96,13 @@
   .active-tab {
     margin: 15px 0;
   }
-
-  .stack-ul {
-    width: 95%;
-    justify-content: space-around;
-  }
 }
 
 @media (max-width: 768px) {
+  .stack-ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .techstck-heading {
     margin-top: 30px;
   }

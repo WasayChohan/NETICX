@@ -48,6 +48,7 @@
 
 .footer-li {
   width: auto;
+
   list-style-type: none;
   text-decoration: none;
   cursor: pointer;
@@ -61,6 +62,10 @@
   line-height: 45.37px;
 }
 
+.footer-li a {
+  color: #ffffff !important;
+  border-bottom: none;
+}
 @media screen and (max-width: 1232px) {
   .footer-body {
     width: 95%;

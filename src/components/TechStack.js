@@ -106,7 +106,8 @@ function TechStack() {
             key={index}
             src={value.src}
             alt=""
-            width="120px"
+            width="100px"
+            height="80px"
             className="stack-img"
           />
         ))}

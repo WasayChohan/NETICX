@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./WhoWeAre.css";
-import img4 from "../assets/Images/img4.jpg";
 import { ArrowForward } from "@mui/icons-material";
+import { FaPlay, FaPause } from "react-icons/fa";
+import ReactPlayer from "react-player";
+import Video from "../assets/video/officevideo.mp4";
 
 function WhoWeAre(props) {
+  const [playing, setPlaying] = useState(true);
+
+  const togglePlayPause = () => {
+    setPlaying(!playing);
+  };
+
   return (
     <div className="whoweare" id={props.id}>
       <div className="whoweare-body">
@@ -27,13 +35,20 @@ function WhoWeAre(props) {
             Explore our Service <ArrowForward />
           </h5>
         </div>
+
         <div className="video">
-          <img
-            src={img4}
-            alt=""
-            className="are-img"
-            style={{ Width: "600px", Height: "400px", borderRadius: "30px" }}
+          <ReactPlayer
+            url={Video}
+            playing={playing}
+            controls={false}
+            // width="100%"
+            // height="100%"
+            className="player"
           />
+
+          <div className="play-pause-btn" onClick={togglePlayPause}>
+            {playing ? <FaPause /> : <FaPlay />}
+          </div>
         </div>
       </div>
     </div>

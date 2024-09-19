@@ -29,10 +29,14 @@ function Review() {
     beforeChange: (current, next) => {
       const texts = [
         "Without any doubt I recommend Neticx as one of the best web design and digital marketing agencies. One of the best agencies I’ve came across so far. Wouldn’t be hesitated to introduce their work to someone else.",
-        "Choosing Neticx was a game-changer for our business. Their expertise in web design and digital marketing truly stands out. They provided exceptional service and innovative solutions that exceeded our expectations. I confidently recommend their services to anyone looking to elevate their online presence.",
-        "Neticx has been instrumental in transforming our digital strategy. Their team delivered top-notch design and marketing solutions tailored to our needs. Their commitment to quality and professionalism is unmatched. I am pleased with their work and would highly recommend them to others.",
-        "Working with Neticx has been an outstanding experience. Their approach to web design and digital marketing is both creative and effective. They provided clear communication and excellent results, making them a standout choice for anyone needing expert services in these fields.",
-        "Neticx has demonstrated exceptional skills in both web design and digital marketing. Their dedication to delivering high-quality results is evident in their work. They have been a reliable partner, and I would not hesitate to recommend their services to anyone seeking professional and impactful solutions.",
+
+        "Neticx is without a doubt among the top web design and digital marketing firms, in my opinion. Among the greatest organisations I've found thus far. wouldn't think twice about introducing their work to others.",
+
+        "As one of the top web design and digital marketing firms, Neticx comes highly recommended from me. Among the best agencies I've found thus far. wouldn't think twice to present their work to another person.",
+
+        "As another of the very top web design and digital marketing firms, Neticx comes highly recommended from me. Among the best agencies I've found thus far. wouldn't think twice to present their work to another person.",
+
+        "Becoming a member of the top web design and internet advertising firms, Neticx comes highly recommended from me. Among the best agencies I've found thus far. wouldn't think twice to present their work to another person.",
       ];
       setCurrentText(texts[next % texts.length]);
     },
