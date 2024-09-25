@@ -30,12 +30,10 @@ function Header() {
   const handleNavClick = (path, id, e) => {
     e.preventDefault();
     if (location.pathname === "/") {
-      // If on home page, scroll to the section
       handleScroll(id);
     } else {
-      // Navigate to home page first and then scroll
       navigate("/");
-      setTimeout(() => handleScroll(id), 300); // Scroll after navigating to home
+      setTimeout(() => handleScroll(id), 300);
     }
     closeMenu();
   };
