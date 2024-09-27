@@ -10,17 +10,14 @@ import Products from "./Pages/Products.js";
 import Approach from "./Pages/Approach.js";
 import Portfolio from "./Pages/Portfolio.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Card from "./Card.js";
 
 function App() {
   return (
     <div className="App">
-      <Card />
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Navbar />
- 
+
         <Routes>
-         
           <Route path="/" element={<Home />} />
           <Route path="/service" element={<Service />} />
           <Route path="/whoweare" element={<WhoWeAre />} />
@@ -29,7 +26,7 @@ function App() {
           <Route path="/portfolio" element={<Portfolio id="portfolio" />} />
         </Routes>
         <Footer />
-      </BrowserRouter> */}
+      </BrowserRouter>
     </div>
   );
 }
