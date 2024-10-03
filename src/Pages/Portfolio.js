@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Portfolio.css";
-import { useState } from "react";
-// import portfolioimg from "../assets/Images/portfolioimg.png";
-// import neticxportfolio from "../assets/Images/neticxportfolio.jpg";
 import netimg from "../assets/Images/pexels-maoriginalphotography-1485894.jpg";
+
+// Modal Component to show the popup image
+const Modal = ({ isOpen, closeModal, imageSrc }) => {
+  if (!isOpen) return null;
+
+  return (
+    <div className="modal-overlay" onClick={closeModal}>
+      <div className="modal-content">
+        <span className="close-button" onClick={closeModal}>
+          ×
+        </span>
+        <img src={imageSrc} alt="Enlarged" className="modal-img" />
+      </div>
+    </div>
+  );
+};
 
 function Portfolio(props) {
   const images = [
@@ -27,9 +40,22 @@ function Portfolio(props) {
     { src: require("../assets/Images/techimg6.png"), item: "desktop_dev" },
   ];
 
-  const [tab, setTAb] = useState(1);
+  const [tab, setTab] = useState(1);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
+  const [selectedImage, setSelectedImage] = useState(null); // Track selected image
+
   const activeTab = (tabNumber) => {
-    setTAb(tabNumber);
+    setTab(tabNumber);
+  };
+
+  const openModal = (imageSrc) => {
+    setSelectedImage(imageSrc);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
   };
 
   const web_dev = images.filter((e) => e.item === "web_dev");
@@ -53,7 +79,7 @@ function Portfolio(props) {
       <div
         className="fortfolioimg"
         style={{
-          backgroundImage: `url(${netimg}) `,
+          backgroundImage: `url(${netimg})`,
         }}
       >
         <div className="portfolio-heading">
@@ -68,42 +94,54 @@ function Portfolio(props) {
           <ul className="techs-ul">
             <li
               onClick={() => activeTab(1)}
-              className={`tech-li  ${tab === 1 ? "active" : ""} `}
+              className={`tech-li ${tab === 1 ? "active" : ""}`}
             >
               Web Development
             </li>
             <li
               onClick={() => activeTab(2)}
-              className={`tech-li  ${tab === 2 ? "active" : ""} `}
+              className={`tech-li ${tab === 2 ? "active" : ""}`}
             >
               UI/UX Designing
             </li>
             <li
               onClick={() => activeTab(3)}
-              className={`tech-li  ${tab === 3 ? "active" : ""} `}
+              className={`tech-li ${tab === 3 ? "active" : ""}`}
             >
               Mobile App Development
             </li>
-            <li
+            {/* <li
               onClick={() => activeTab(4)}
-              className={`tech-li  ${tab === 4 ? "active" : ""} `}
+              className={`tech-li ${tab === 4 ? "active" : ""}`}
             >
               Desktop Development
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="tech-imgs">
           {data.map((value, index) => (
-            <div className="image-container">
+            <div className="image-container" key={index}>
               <div className="image-overlay">
-                <button className="view-img">View Project</button>
+                <button
+                  className="view-img"
+                  onClick={() => openModal(value.src)} // Open modal with the image
+                >
+                  View Project
+                </button>
               </div>
-              <img key={index} src={value.src} alt="" className="tech-img" />
+              <img src={value.src} alt="" className="tech-img" />
             </div>
           ))}
         </div>
         <button className="load-btn">Load More</button>
       </div>
+
+      {/* Modal to show the image in a popup */}
+      <Modal
+        isOpen={isModalOpen}
+        closeModal={closeModal}
+        imageSrc={selectedImage}
+      />
     </div>
   );
 }
