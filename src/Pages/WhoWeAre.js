@@ -6,7 +6,7 @@ import ReactPlayer from "react-player";
 import Video from "../assets/video/officevideo.mp4";
 
 function WhoWeAre(props) {
-  const [playing, setPlaying] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
   const togglePlayPause = () => {
     setPlaying(!playing);

@@ -1,0 +1,104 @@
+.contact {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 180px;
+}
+
+.sub-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: auto;
+  margin-top: 50px;
+}
+
+.contact-h1 {
+  line-height: 20px !important;
+}
+
+.contact-heading h1 {
+  width: auto;
+  font-size: 35px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 55px;
+}
+
+.form-row {
+  display: flex;
+  /* justify-content: space-between; */
+
+  gap: 20px; /* Spacing between input fields */
+}
+
+.form-col {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 800px;
+}
+
+form input {
+  width: 500px;
+}
+
+form input,
+form textarea {
+  padding: 20px;
+  border: 2px solid transparent;
+  outline: none;
+  background: #f7f7fa;
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  transition: border 0.4s ease-in-out;
+}
+
+/* Add border on focus */
+form input:focus,
+form textarea:focus {
+  border: 2px solid #d80e0e;
+}
+
+textarea {
+  resize: none;
+  height: 250px;
+  width: 100%;
+}
+
+.btnn {
+  width: 140px;
+  padding: 13px 0;
+  background-color: #d80e0e;
+  color: white;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  border: 2px solid #d80e0e;
+}
+
+.btnn:hover {
+  background-color: white;
+  color: #000;
+  transition: 0.4s;
+  cursor: pointer;
+}

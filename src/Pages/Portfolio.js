@@ -1,7 +1,9 @@
 import React from "react";
 import "./Portfolio.css";
 import { useState } from "react";
-import portfolioimg from "../assets/Images/portfolioimg.png";
+// import portfolioimg from "../assets/Images/portfolioimg.png";
+// import neticxportfolio from "../assets/Images/neticxportfolio.jpg";
+import netimg from "../assets/Images/pexels-maoriginalphotography-1485894.jpg";
 
 function Portfolio(props) {
   const images = [
@@ -51,7 +53,7 @@ function Portfolio(props) {
       <div
         className="fortfolioimg"
         style={{
-          backgroundImage: `url(${portfolioimg}) `,
+          backgroundImage: `url(${netimg}) `,
         }}
       >
         <div className="portfolio-heading">

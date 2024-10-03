@@ -36,8 +36,9 @@
   justify-content: space-evenly;
 
   width: 300px;*/
+  width: 380px !important;
 
-  padding: 20px;
+  padding: 10px;
   border-radius: 35px;
 
   border: 6px solid #ff002e;
@@ -68,7 +69,7 @@
   font-size: 20px;
   font-weight: 600;
   color: linear-gradient(225deg, #f76680 0%, #57007b 100%) !important;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .p2 {
@@ -78,7 +79,22 @@
   font-size: 14px;
   font-weight: 400;
   color: #718096;
-  margin-top: 40px;
+  margin-top: 10px;
+}
+
+.read-more-btn {
+  position: relative;
+  left: 240px;
+  color: #d80e0e;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.read-more-btn:hover {
+  font-size: 16px;
+  transition: 0.4s;
 }
 
 .slick-dots li button:before {

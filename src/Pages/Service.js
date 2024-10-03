@@ -54,28 +54,57 @@ function Service(props) {
   const box = [
     {
       img: boximg1,
-      p1: "Mobile App Development",
-      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      p1: "Web Development",
+      p2: "From custom websites to powerful e-commerce platforms, we build digital solutions that captivate and convert.",
+      link: "Webdev",
     },
     {
       img: boximg2,
-      p1: "Software Testing Service",
-      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      p1: "Graphic Designing",
+      p2: "We craft visually stunning designs that enhance your brand identity and leave a lasting impression..",
+      link: "Graphic",
     },
     {
       img: boximg3,
-      p1: "Web Design & Development",
-      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      p1: "Content Writing",
+      p2: "Engage your audience with compelling content that drives action and resonates with your brand's voice.",
+      link: "Content",
     },
     {
       img: boximg2,
-      p1: "Software Testing Service",
-      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      p1: "Digital Marketing",
+      p2: "Amplify your online presence with strategic digital marketing services, including SEO, PPC, and social media management.",
+      link: "Digital",
     },
     {
       img: boximg3,
-      p1: "Web Design & Development",
-      p2: "A Website is an extension of yourself and we can help you to express it properly. Your website is your number one marketing asset because we live in a digital age.",
+      p1: "Android / iOS Development",
+      p2: "Reach your audience with expertly designed mobile apps for Android and iOS platforms.",
+      link: "Androiddev",
+    },
+    {
+      img: boximg3,
+      p1: "Automation Integration",
+      p2: "Streamline your operations with tailored automation solutions and seamless integrations.",
+      link: "Automation",
+    },
+    {
+      img: boximg3,
+      p1: "Blockchain Development",
+      p2: "Dive into the future with our blockchain expertise in Ethereum, Binance, Polygon, Tron, Solana, and smart contracts.",
+      link: "Blockchain",
+    },
+    {
+      img: boximg3,
+      p1: "UX/UI Design",
+      p2: "Create exceptional user experiences with intuitive and engaging UX/UI designs.",
+      link: "Uiux",
+    },
+    {
+      img: boximg3,
+      p1: "AI Services",
+      p2: "Leverage the power of artificial intelligence with advanced AI solutions, including machine learning and NLP.",
+      link: "Ai",
     },
   ];
 
@@ -91,6 +120,13 @@ function Service(props) {
               </div>
               <p className="p1">{box.p1}</p>
               <p className="p2">{box.p2}</p>
+
+              <button
+                onClick={() => (window.location.href = box.link)}
+                className="read-more-btn"
+              >
+                read more --
+              </button>
             </div>
           ))}
         </Slider>

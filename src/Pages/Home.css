@@ -56,6 +56,11 @@
   gap: 23px;
   margin-top: 25px;
 }
+
+.buttons a {
+  border-bottom: none;
+}
+
 .consult_but {
   padding: 14px 25px;
   border-radius: 5px;

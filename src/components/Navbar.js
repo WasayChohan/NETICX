@@ -3,7 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/Images/logo.png";
 import "./Navbar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation(); // Get the current location
@@ -90,7 +90,9 @@ function Header() {
           </li>
         </ul>
 
-        <button className="nav_contact_button">Contact Us</button>
+        <Link to="/contact" className="contact-btn-link">
+          <button className="nav_contact_button">Contact Us</button>
+        </Link>
       </nav>
       <div className="menu_icon" onClick={toggleMenu}>
         <MenuIcon />

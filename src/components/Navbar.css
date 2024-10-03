@@ -59,7 +59,9 @@ a.active {
   display: none;
   z-index: 10;
 }
-
+.contact-btn-link {
+  border-bottom: none !important;
+}
 @media screen and (max-width: 1125px) {
   .nav {
     display: none !important;

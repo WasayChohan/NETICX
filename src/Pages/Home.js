@@ -11,6 +11,7 @@ import Design from "../components/Design.js";
 import Success from "../components/Success.js";
 import TechStack from "../components/TechStack.js";
 import Approach from "./Approach.js";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -29,7 +30,9 @@ function Home() {
             STRONG TECHNOLOGY TEAMS FOR YOUR SUSTAINED GROWTH
           </p>
           <div className="buttons">
-            <button className="nav_contact_button">Contact US</button>
+            <Link to="/contact">
+              <button className="nav_contact_button">Contact us</button>
+            </Link>
             <button className="consult_but">Get Free Consulting</button>
           </div>
         </div>
