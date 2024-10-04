@@ -14,8 +14,7 @@ function Service(props) {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "150px",
-
+    centerPadding: "110px",
     arrows: false,
 
     responsive: [
@@ -125,7 +124,7 @@ function Service(props) {
                 onClick={() => (window.location.href = box.link)}
                 className="read-more-btn"
               >
-                read more --
+                read more...
               </button>
             </div>
           ))}

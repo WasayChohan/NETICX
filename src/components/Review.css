@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 0 50px 0;
+  /* padding: 50px 0 50px 0; */
 }
 
 .review-body {
@@ -13,6 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  /* margin-top: 100px; */
 }
 
 .slider-btn {
@@ -23,21 +24,21 @@
 }
 
 .prev-btn {
-  padding: 15px;
+  padding: 12px;
   border: 2px solid#57007B;
-  border-radius: 30px;
+  border-radius: 40px;
   background-color: transparent;
 }
 .next-btn {
-  padding: 15px;
+  padding: 12px;
   border: 2px solid#57007B;
-  border-radius: 30px;
+  border-radius: 40px;
   background-color: transparent;
 }
 
 .review-text {
   width: auto;
-  margin: 20px 0;
+  /* margin: 20px 0; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,9 +47,10 @@
 .review-color-line {
   width: 69px;
   padding: 2px;
-  margin-top: -27px;
+  /* margin-top: -27px; */
   background: linear-gradient(225deg, #f76680 0%, #57007b 100%);
-  margin-bottom: 60px;
+  margin-bottom: 30px;
+  margin-top: 100px;
 }
 
 .review-p1 {
@@ -70,6 +72,7 @@
 
 .review-show {
   width: 100%;
+
   height: auto;
   display: flex;
   flex-direction: column;
@@ -118,7 +121,48 @@
   text-align: center;
   color: #000000;
   line-height: 15px;
-  margin-top: -10px;
+}
+
+.slider-container {
+  /* width: 90%; */
+  margin: auto;
+}
+
+.slick-slide {
+  transition: transform 0.3s ease-in-out;
+  padding: 40px 0;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+.slick-center {
+  opacity: 1 !important; /* Full opacity for the center slide */
+  transform: translateY(-20px); /* Move the center slide up */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for both transform and opacity */
+}
+
+.slick-slide .reviews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Ensure full height for all slides */
+  margin: 0;
+}
+
+.slide-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {

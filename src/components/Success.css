@@ -1,7 +1,7 @@
 .success {
   width: 100%;
   height: auto;
-  padding: 75px 0px;
+  padding: 120px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +10,8 @@
     #d80e0e 0%,
     #000000 100%
   );
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 100px;
+  /* margin-bottom: 20px; */
 }
 
 .success-body {
@@ -29,7 +29,7 @@
 .success-h1 {
   font-size: 80px;
   font-weight: 700;
-  line-height: 170px;
+  /* line-height: 100px; */
   letter-spacing: -0.005em;
   text-align: center;
   color: #ffffff;
@@ -38,7 +38,7 @@
 .success-p {
   font-size: 30px;
   font-weight: 400;
-  line-height: 30px;
+  /* line-height: 100px; */
   letter-spacing: -0.005em;
   text-align: center;
   color: #ffffff;

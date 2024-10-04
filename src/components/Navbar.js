@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/Images/logo.png";
 import "./Navbar.css";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation(); // Get the current location
   const navigate = useNavigate(); // For programmatic navigation
 
@@ -38,9 +41,32 @@ function Header() {
     closeMenu();
   };
 
+  const handleScrollVisibility = () => {
+    const scrollY = window.scrollY;
+    if (scrollY > lastScrollY) {
+      // Scrolling down
+      setIsVisible(false);
+    } else {
+      // Scrolling up
+      setIsVisible(true);
+    }
+    setLastScrollY(scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollVisibility);
+    return () => {
+      window.removeEventListener("scroll", handleScrollVisibility);
+    };
+  }, [lastScrollY]);
+
   return (
     <div>
-      <nav className={`nav ${isMenuOpen ? "open" : ""}`}>
+      <nav
+        className={`nav ${isMenuOpen ? "open" : ""} ${
+          isVisible ? "visible" : "hidden"
+        }`}
+      >
         <div className="logo">
           <img src={logo} alt="Logo" width="230px" height="88px" />
         </div>

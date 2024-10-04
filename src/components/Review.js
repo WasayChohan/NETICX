@@ -18,11 +18,15 @@ function Review() {
   );
 
   const settings = {
-    dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 5,
+    slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "240px",
+    focusOnSelect: true, // Allows clicking to focus on a slide
+    dots: false,
+
     arrows: false,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -47,7 +51,8 @@ function Review() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true,
+          dots: false,
+          centerPadding: "0px",
         },
       },
       {
@@ -56,7 +61,8 @@ function Review() {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: true,
+          dots: false,
+          centerPadding: "0px",
         },
       },
       {
@@ -65,6 +71,8 @@ function Review() {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
+          dots: false,
+          centerPadding: "0px",
         },
       },
     ],
