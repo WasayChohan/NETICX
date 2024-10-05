@@ -85,20 +85,20 @@ textarea {
 }
 
 .btnn {
-  width: 140px;
-  padding: 13px 0;
+  padding: 10px 25px;
   background-color: #d80e0e;
   color: white;
   border-radius: 5px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 10px;
-  border: 2px solid #d80e0e;
+  width: fit-content;
 }
 
 .btnn:hover {
   background-color: white;
   color: #000;
+  border: 2px solid #d80e0e;
   transition: 0.4s;
   cursor: pointer;
 }
