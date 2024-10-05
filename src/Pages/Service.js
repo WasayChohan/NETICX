@@ -14,7 +14,7 @@ function Service(props) {
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
-    centerPadding: "110px",
+    centerPadding: "120px",
     arrows: false,
 
     responsive: [
@@ -29,7 +29,7 @@ function Service(props) {
         },
       },
       {
-        breakpoint: 1124,
+        breakpoint: 1125,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -44,7 +44,7 @@ function Service(props) {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
-          centerPadding: "0",
+          centerPadding: "2",
         },
       },
     ],

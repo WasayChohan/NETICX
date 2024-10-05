@@ -28,16 +28,21 @@
 }
 
 .navbar-ul {
+  display: flex;
   width: auto;
   list-style-type: none;
-  display: flex;
+
   gap: 45px;
 
   font-size: 16px;
   font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
 }
 .navbar-li {
   cursor: pointer;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -95,7 +100,8 @@ a.active {
   .menu_icon {
     display: block;
     position: absolute;
-    right: 10px;
+    right: 15px;
+    top: 10px;
   }
   .navbar-ul {
     display: flex;
@@ -128,7 +134,7 @@ a.active {
   .menu_icon {
     display: block;
     position: absolute;
-    right: 10px;
+    right: 15px;
   }
   .navbar-ul {
     display: flex;

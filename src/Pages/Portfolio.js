@@ -20,12 +20,12 @@ const Modal = ({ isOpen, closeModal, imageSrc }) => {
 
 function Portfolio(props) {
   const images = [
-    { src: require("../assets/Images/techimg1.png"), item: "web_dev" },
-    { src: require("../assets/Images/techimg2.png"), item: "web_dev" },
-    { src: require("../assets/Images/techimg3.png"), item: "web_dev" },
-    { src: require("../assets/Images/techimg4.png"), item: "web_dev" },
-    { src: require("../assets/Images/techimg5.png"), item: "web_dev" },
-    { src: require("../assets/Images/techimg6.png"), item: "web_dev" },
+    { src: require("../assets/Images/webdev5.jpg"), item: "web_dev" },
+    { src: require("../assets/Images/webdev2.jpg"), item: "web_dev" },
+    { src: require("../assets/Images/webdev3.jpg"), item: "web_dev" },
+    { src: require("../assets/Images/webdev4.jpg"), item: "web_dev" },
+    { src: require("../assets/Images/webdev1.jpg"), item: "web_dev" },
+    { src: require("../assets/Images/webdev6.jpg"), item: "web_dev" },
     { src: require("../assets/Images/techimg6.png"), item: "ui_design" },
     { src: require("../assets/Images/techimg4.png"), item: "ui_design" },
     { src: require("../assets/Images/techimg5.png"), item: "ui_design" },

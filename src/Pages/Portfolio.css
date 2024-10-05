@@ -34,7 +34,7 @@
 .portfolio-p1 {
   font-size: 27px;
   font-weight: 400;
-  line-height: 83px;
+  line-height: 55px;
 }
 
 .technologies {
@@ -62,8 +62,8 @@
 .tech-li {
   list-style-type: none;
   width: auto;
-  padding: 20px 45px;
-  border-radius: 7px;
+  padding: 14px 25px;
+  border-radius: 5px;
   font-size: 17px;
   font-weight: 600;
   cursor: pointer;
@@ -83,8 +83,8 @@
 }
 
 .tech-imgs {
-  width: auto;
-  height: auto;
+  /* width: 353px;
+  height: 353px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
@@ -118,7 +118,7 @@
 
 .tech-img {
   display: block;
-  height: 453px;
+  height: 375px;
   width: 453px;
   border-radius: 18px;
 
@@ -168,15 +168,13 @@
 }
 
 .modal-img {
-  /* Set max width and height for equal spacing */
-  width: 60%;
-  max-height: 80vh; /* Ensure it doesn't take up too much vertical space */
-  object-fit: contain; /* Maintain image aspect ratio */
+  width: 65%; /* Increase size in modal */
+  max-height: 95vh; /* Max height for larger modal display */
+  object-fit: contain; /* Maintain aspect ratio */
   border-radius: 10px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow effect */
-  transition: transform 0.3s ease; /* Smooth transition */
-  margin: auto; /* Ensure equal space on all sides */
-  display: block; /* Center the image */
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  display: block;
 }
 
 .modal-overlay {
@@ -203,29 +201,31 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  max-width: 90vw;
+  max-width: 95vw;
   max-height: 90vh;
+  position: relative;
 }
 
 .modal-img:hover {
-  transform: scale(1.05); /* Slight zoom on hover */
+  transform: scale(1.01);
 }
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 24px;
+  top: 0px;
+  right: 155px;
+  font-size: 30px;
   cursor: pointer;
-  color: #333;
+  color: #fff;
   background: none;
   border: none;
   transition: transform 0.2s ease;
+  z-index: 1001;
 }
 
 .close-button:hover {
-  color: #f76680; /* Change color on hover */
-  transform: scale(1.2); /* Add scale effect on hover */
+  color: #f76680;
+  transform: scale(1.2);
 }
 
 /* Zoom In Animation */

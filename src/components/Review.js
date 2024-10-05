@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import "./Review.css";
+import profile7 from "../assets/Images/profile7.jpg";
 import img13 from "../assets/Images/img13.png";
-import img14 from "../assets/Images/img14.png";
-import img15 from "../assets/Images/img15.png";
+import profile3 from "../assets/Images/profile3.png";
+import profile2 from "../assets/Images/profile2.png";
 import img16 from "../assets/Images/img16.png";
-import img17 from "../assets/Images/img17.png";
 
 import starimg from "../assets/Images/starimg.png";
 
@@ -104,35 +104,35 @@ function Review() {
   const reviews = [
     {
       id: 1,
-      img: img14,
+      img: profile7,
       stars: starimg,
       reviews_p1: "Corina McCoy",
       reviews_p2: "Software Engineer",
     },
     {
       id: 2,
-      img: img15,
-      stars: starimg,
-      reviews_p1: "Corina McCoy",
-      reviews_p2: "Software Engineer",
-    },
-    {
-      id: 3,
       img: img13,
       stars: starimg,
       reviews_p1: "Corina McCoy",
       reviews_p2: "Software Engineer",
     },
     {
+      id: 3,
+      img: profile3,
+      stars: starimg,
+      reviews_p1: "Corina McCoy",
+      reviews_p2: "Software Engineer",
+    },
+    {
       id: 4,
-      img: img16,
+      img: profile2,
       stars: starimg,
       reviews_p1: "Corina McCoy",
       reviews_p2: "Software Engineer",
     },
     {
       id: 5,
-      img: img17,
+      img: img16,
       stars: starimg,
       reviews_p1: "Corina McCoy",
       reviews_p2: "Software Engineer",
