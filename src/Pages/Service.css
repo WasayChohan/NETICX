@@ -177,12 +177,12 @@
   }
 
   .slick-dots {
-    bottom: 0; /* Ensure the dots stay at the bottom of the slider */
-    margin-top: 15px; /* Add some space above the dots */
+    bottom: 0;
+    margin-top: 15px;
   }
 
   .slick-dots li button:before {
-    font-size: 13px !important; /* Slightly smaller dots on small screens */
-    margin-top: 0px; /* Adjust margin for smaller screens */
+    font-size: 13px !important;
+    margin-top: 0px;
   }
 }

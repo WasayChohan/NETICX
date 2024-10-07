@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import "./Portfolio.css";
 import netimg from "../assets/Images/pexels-maoriginalphotography-1485894.jpg";
 
-// Modal Component to show the popup image
-const Modal = ({ isOpen, closeModal, imageSrc }) => {
+const Modal = ({ isOpen, closeModal, imageSrc, text }) => {
   if (!isOpen) return null;
 
   return (
@@ -12,7 +11,15 @@ const Modal = ({ isOpen, closeModal, imageSrc }) => {
         <span className="close-button" onClick={closeModal}>
           ×
         </span>
-        <img src={imageSrc} alt="Enlarged" className="modal-img" />
+        <div className="modal-body">
+          <div className="modal-img-container">
+            <img src={imageSrc} alt="Enlarged" className="modal-img" />
+          </div>
+          <div className="modal-text-container">
+            <h2>Project Overview</h2>
+            <p>{text}</p>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -20,59 +27,75 @@ const Modal = ({ isOpen, closeModal, imageSrc }) => {
 
 function Portfolio(props) {
   const images = [
-    { src: require("../assets/Images/webdev5.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/webdev2.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/webdev3.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/webdev4.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/webdev1.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/webdev6.jpg"), item: "web_dev" },
-    { src: require("../assets/Images/techimg6.png"), item: "ui_design" },
+    {
+      src: require("../assets/Images/image-5760x4450 (1).jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    {
+      src: require("../assets/Images/web1.jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    {
+      src: require("../assets/Images/image-5760x4450 (3).jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    {
+      src: require("../assets/Images/image-5760x4450 (4).jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    {
+      src: require("../assets/Images/image-5760x4450 (5).jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    {
+      src: require("../assets/Images/web2.jpg"),
+      item: "web_dev",
+      text: "This project showcases a cutting-edge, responsive website developed using modern web technologies such as HTML5, CSS3, and JavaScript. It is designed to seamlessly adapt to various screen sizes and devices, offering an optimized user experience whether on mobile, tablet, or desktop. The site features an intuitive layout with smooth animations and interactive UI elements, creating a visually appealing and engaging experience for users. The minimalist design focuses on clarity and ease of navigation.",
+    },
+    { src: require("../assets/Images/mob1 (1).jpg"), item: "ui_design" },
     { src: require("../assets/Images/techimg4.png"), item: "ui_design" },
     { src: require("../assets/Images/techimg5.png"), item: "ui_design" },
     { src: require("../assets/Images/techimg6.png"), item: "ui_design" },
-    { src: require("../assets/Images/techimg3.png"), item: "mobile_dev" },
-    { src: require("../assets/Images/techimg4.png"), item: "mobile_dev" },
-    { src: require("../assets/Images/techimg5.png"), item: "mobile_dev" },
-    { src: require("../assets/Images/techimg6.png"), item: "mobile_dev" },
-    { src: require("../assets/Images/techimg6.png"), item: "desktop_dev" },
-    { src: require("../assets/Images/techimg4.png"), item: "desktop_dev" },
-    { src: require("../assets/Images/techimg5.png"), item: "desktop_dev" },
-    { src: require("../assets/Images/techimg6.png"), item: "desktop_dev" },
+    { src: require("../assets/Images/mob1 (1).jpg"), item: "mobile_app" },
+    { src: require("../assets/Images/mob2.jpg"), item: "mobile_app" },
+    { src: require("../assets/Images/mob3.jpg"), item: "mobile_app" },
+    { src: require("../assets/Images/mob4.jpg"), item: "mobile_app" },
+    { src: require("../assets/Images/mob6.jpg"), item: "mobile_app" },
+    { src: require("../assets/Images/mob7.jpg"), item: "mobile_app" },
   ];
 
   const [tab, setTab] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false); // Modal state
   const [selectedImage, setSelectedImage] = useState(null); // Track selected image
+  const [selectedText, setSelectedText] = useState(""); // Track selected text
 
   const activeTab = (tabNumber) => {
     setTab(tabNumber);
   };
 
-  const openModal = (imageSrc) => {
+  const openModal = (imageSrc, text) => {
     setSelectedImage(imageSrc);
+    setSelectedText(text);
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedImage(null);
+    setSelectedText("");
   };
 
   const web_dev = images.filter((e) => e.item === "web_dev");
   const ui_design = images.filter((e) => e.item === "ui_design");
-  const mobile_dev = images.filter((e) => e.item === "mobile_dev");
-  const desktop_dev = images.filter((e) => e.item === "desktop_dev");
+  const mobile_app = images.filter((e) => e.item === "mobile_app");
 
   const data =
-    tab === 1
-      ? web_dev
-      : tab === 2
-      ? ui_design
-      : tab === 3
-      ? mobile_dev
-      : tab === 4
-      ? desktop_dev
-      : null;
+    tab === 1 ? web_dev : tab === 2 ? ui_design : tab === 3 ? mobile_app : null;
 
   return (
     <div className="portfolio" id={props.id}>
@@ -108,14 +131,8 @@ function Portfolio(props) {
               onClick={() => activeTab(3)}
               className={`tech-li ${tab === 3 ? "active" : ""}`}
             >
-              Mobile App Development
+              Mobile Application
             </li>
-            {/* <li
-              onClick={() => activeTab(4)}
-              className={`tech-li ${tab === 4 ? "active" : ""}`}
-            >
-              Desktop Development
-            </li> */}
           </ul>
         </div>
         <div className="tech-imgs">
@@ -124,7 +141,7 @@ function Portfolio(props) {
               <div className="image-overlay">
                 <button
                   className="view-img"
-                  onClick={() => openModal(value.src)} // Open modal with the image
+                  onClick={() => openModal(value.src, value.text)} // Open modal with the image and text
                 >
                   View Project
                 </button>
@@ -136,11 +153,12 @@ function Portfolio(props) {
         <button className="load-btn">Load More</button>
       </div>
 
-      {/* Modal to show the image in a popup */}
+      {/* Modal to show the image and text in a popup */}
       <Modal
         isOpen={isModalOpen}
         closeModal={closeModal}
         imageSrc={selectedImage}
+        text={selectedText}
       />
     </div>
   );
