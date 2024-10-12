@@ -68,6 +68,15 @@
   font-weight: 600;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  color: #000000;
+}
+
+.consult_but:hover {
+  box-shadow: inset 400px 0 0 0 #d80e0e;
+  color: white;
 }
 
 .home-img-div {

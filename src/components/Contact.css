@@ -102,3 +102,57 @@ textarea {
   transition: 0.4s;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .contact {
+    width: 95%;
+    margin: auto;
+  }
+  .contact-heading {
+    margin-top: 50px;
+  }
+
+  .contact-heading h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .sub-contact {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+    padding: 0px 5px;
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack the inputs vertically on smaller screens */
+    gap: 0;
+  }
+
+  form input,
+  textarea {
+    width: 100%; /* Ensure inputs take full width */
+  }
+
+  textarea {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-heading h1 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .contact-heading {
+    margin-top: 30px;
+  }
+
+  form input,
+  textarea {
+    font-size: 1rem;
+  }
+}

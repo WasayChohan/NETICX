@@ -19,6 +19,10 @@ import Uiux from "./Pages/ServicePages/Uiux.js";
 import Blockchain from "./Pages/ServicePages/Blockchain.js";
 import Ai from "./Pages/ServicePages/Ai.js";
 import Contact from "./components/Contact.js";
+import HmsCaseStudy from "./Pages/ProjectCaseStudy/HmsCaseStudy.js";
+import HrmCaseStudy from "./Pages/ProjectCaseStudy/HrmCaseStudy.js";
+import CaribbeanCaseStudy from "./Pages/ProjectCaseStudy/CaribbeanCaseStudy.js";
+// import DB from "./db.json";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -43,6 +47,10 @@ function App() {
 
           <Route path="/whoweare" element={<WhoWeAre />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/hmscasestudy" element={<HmsCaseStudy />} />
+          <Route path="/hrmcasestudy" element={<HrmCaseStudy />} />
+          <Route path="/caribbeancasestudy" element={<CaribbeanCaseStudy />} />
+          {/* <Route path="/db" element={<DB />} /> */}
           <Route path="/approach" element={<Approach />} />
           <Route path="/portfolio" element={<Portfolio id="portfolio" />} />
         </Routes>

@@ -77,7 +77,7 @@ function Service(props) {
     },
     {
       img: boximg3,
-      p1: "Android / iOS Development",
+      p1: "Android / IOS Development",
       p2: "Reach your audience with expertly designed mobile apps for Android and iOS platforms.",
       link: "Androiddev",
     },

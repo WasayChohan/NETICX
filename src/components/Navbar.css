@@ -70,7 +70,15 @@ a.active {
   font-weight: 600;
   cursor: pointer;
   border: none;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
 }
+
+.nav_contact_button:hover {
+  box-shadow: inset 400px 0 0 0 #e92d2d;
+}
+
 .menu_icon {
   display: none;
   z-index: 10;
