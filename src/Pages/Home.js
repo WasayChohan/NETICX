@@ -6,7 +6,7 @@ import Service from "./Service.js";
 import WhoWeAre from "./WhoWeAre.js";
 import Sponsor from "../components/Sponsor.js";
 import Review from "../components/Review.js";
-import Products from "./Products.js";
+import OurCaseStudy from "./OurCaseStudy.js";
 import Design from "../components/Design.js";
 import Success from "../components/Success.js";
 import TechStack from "../components/TechStack.js";
@@ -41,16 +41,6 @@ function Home() {
           <img src={img1} alt="" className="home-img" />
         </div>
       </div>
-
-      <Service id="service" />
-      <WhoWeAre id="whoweare" />
-      <Sponsor />
-      <Review />
-      <Products id="products" />
-      <Design />
-      <Success />
-      <TechStack />
-      <Approach id="approach" />
     </div>
   );
 }

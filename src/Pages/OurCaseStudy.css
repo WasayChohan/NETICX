@@ -129,6 +129,10 @@
   margin: 35px 0;
 }
 
+.arrow-icon {
+  color: #f76680;
+}
+
 @media (max-width: 1179px) {
   .product {
     margin: auto;

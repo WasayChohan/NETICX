@@ -13,7 +13,7 @@ function WhoWeAre(props) {
   };
 
   return (
-    <div className="whoweare" id={props.id}>
+    <section className="whoweare" id="whoweare">
       <div className="whoweare-body">
         <div className="are-text-area">
           <div className="color-line"></div>
@@ -51,7 +51,7 @@ function WhoWeAre(props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -12,6 +12,8 @@
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
+/* Add this to your existing Navbar.css */
+
 .nav.hidden {
   transform: translateY(-100%); /* Move navbar out of view */
 }
@@ -47,9 +49,14 @@
 
 a {
   text-decoration: none !important;
-  color: #000000 !important;
   cursor: pointer;
   font-weight: 500;
+}
+
+.navbar-ul li a.active {
+  color: #d80e0e; /* Change to the desired color for the active link */
+  border-bottom: 2px solid #d80e0e; /* Optional: add a border to the active link */
+  font-weight: bold; /* Optional: make the active link bold */
 }
 
 a:hover {
@@ -57,10 +64,10 @@ a:hover {
   border-bottom: 2px solid #d80e0e;
   color: #d80e0e !important;
 }
-a.active {
+/* /* a.active {
   border-bottom: 2px solid #d80e0e;
   color: #d80e0e !important;
-}
+} */
 
 .nav_contact_button {
   padding: 14px 25px;

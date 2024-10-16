@@ -10,7 +10,8 @@ import js from "../ProjectCaseStudy/CaseStudyImg/javascript.png";
 import git from "../ProjectCaseStudy/CaseStudyImg/social.png";
 import figma from "../ProjectCaseStudy/CaseStudyImg/figma.png";
 // import useFetchData from "./useFetchData";
-import { apiCaseStudy } from "./ApiCaseStudy";
+// import { apiCaseStudy } from "./ApiCaseStudy";
+import useFetchCaseStudyData from "./useFetchCaseStudyData";
 
 function HmsCaseStudy() {
   // const { data } = useFetchData("hms");
@@ -19,10 +20,17 @@ function HmsCaseStudy() {
   //   return <div style={{ marginTop: "100px" }}>Loading...</div>;
   // }
 
-  const data = apiCaseStudy("hms");
+  // const data = apiCaseStudy("hms");
 
   // Handle case where data is empty or undefined
-  if (!data.length) {
+  // if (!data.length) {
+  //   return <div style={{ marginTop: "100px" }}>Loading...</div>;
+  // }
+
+  const { dataState: data, loading } = useFetchCaseStudyData("hms");
+
+  // Show loading while data is being fetched
+  if (loading) {
     return <div style={{ marginTop: "100px" }}>Loading...</div>;
   }
   return (

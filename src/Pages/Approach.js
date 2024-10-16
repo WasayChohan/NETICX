@@ -4,7 +4,7 @@ import cupimg from "../assets/Images/cupimg.png";
 
 function Development(props) {
   return (
-    <div className="development" id={props.id}>
+    <section className="development" id="approach">
       <div className="development-heading">
         <div className="development-color-line"></div>
         <h1 className="development-h1">
@@ -109,7 +109,7 @@ function Development(props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

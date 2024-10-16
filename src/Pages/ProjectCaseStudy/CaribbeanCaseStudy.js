@@ -6,8 +6,9 @@ import vscode from "../ProjectCaseStudy/CaseStudyImg/vscode.png";
 import js from "../ProjectCaseStudy/CaseStudyImg/javascript.png";
 import git from "../ProjectCaseStudy/CaseStudyImg/social.png";
 import figma from "../ProjectCaseStudy/CaseStudyImg/figma.png";
-// import useFetchData from "./useFetchData"; // Adjust the import path as needed
-import { apiCaseStudy } from "./ApiCaseStudy";
+// import useFetchData from "./useFetchData";
+// import { apiCaseStudy } from "./ApiCaseStudy";
+import useFetchCaseStudyData from "./useFetchCaseStudyData";
 
 function CaribbeanCaseStudy() {
   // const { data } = useFetchData("caribbeansconnects");
@@ -16,10 +17,18 @@ function CaribbeanCaseStudy() {
   //   return <div style={{ marginTop: "100px" }}>Loading...</div>;
   // }
   // Directly use the apiCaseStudy function
-  const data = apiCaseStudy("caribbeansconnects");
+  // const data = apiCaseStudy("caribbeansconnects");
 
   // Handle case where data is empty or undefined
-  if (!data.length) {
+  // if (!data.length) {
+  //   return <div style={{ marginTop: "100px" }}>Loading...</div>;
+  // }
+
+  const { dataState: data, loading } =
+    useFetchCaseStudyData("caribbeansconnects");
+
+  // Show loading while data is being fetched
+  if (loading) {
     return <div style={{ marginTop: "100px" }}>Loading...</div>;
   }
 

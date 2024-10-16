@@ -1,5 +1,5 @@
 import React from "react";
-import "./Products.css";
+import "./OurCaseStudy.css";
 import img18 from "../assets/Images/img18.png";
 import youtube from "../assets/Images/youtube.webp";
 import amazon from "../assets/Images/amazon.jpg";
@@ -14,7 +14,7 @@ function Products(props) {
       product_text_h1: "HMS",
       product_p1:
         " The Hospital Management System (HMS) by SalesEmerge is a user-friendly platform designed to help hospitals manage everyday tasks more efficiently. It includes tools for patient registration, billing, scheduling appointments, and maintaining medical records. The system makes it easier for hospitals to organize their operations, leading to better patient care and smoother workflow.",
-      product_text_h5: "Explor",
+      product_link: "./HmsCaseStudy",
     },
     {
       id: 1,
@@ -23,6 +23,7 @@ function Products(props) {
       product_p1:
         "The Human Resource Management System (HRM) by SalesEmerge helps organizations manage their employees easily. It covers important tasks like tracking attendance, processing payroll, and evaluating performance. This system makes HR activities smoother and improves how companies manage their workforce. ",
       // product_text_h5: "Explor",
+      product_link: "./HrmCaseStudy",
     },
     {
       id: 1,
@@ -31,13 +32,14 @@ function Products(props) {
       product_p1:
         "Caribbeans Connects is an online platform that helps creatives like models, musicians, and photographers from the Caribbean, UK, and beyond connect with global opportunities. It allows them to showcase their talents and find collaborations or jobs worldwide. To join, users can simply register on the site and start connecting",
       // product_text_h5: "Explor",
+      product_link: "./CaribbeanCaseStudy",
     },
   ];
 
   return (
-    <div className="products" id={props.id}>
+    <section className="products" id="products">
       <div className="product-color-line"></div>
-      <h1 className="product-h1">Our Products</h1>
+      <h1 className="product-h1">Our Case Study</h1>
 
       {product.map((product) => (
         <div className="product" key={product.id}>
@@ -54,10 +56,13 @@ function Products(props) {
                 <button className="nav_contact_button">Contact us</button>
               </Link> */}
 
-              <Link to="/projectcasestudy" className="projectcase-btn-link">
+              <Link to={product.product_link} className="projectcase-btn-link">
                 <span>
                   <h5 className="explore-alignment">
-                    Explore <ArrowForwardIos />
+                    <span className="explore-text">Explore</span>
+                    <span className="arrow-icon">
+                      <ArrowForwardIos />
+                    </span>
                   </h5>
                 </span>
               </Link>
@@ -67,7 +72,7 @@ function Products(props) {
       ))}
 
       <button className="product-btn">Explore more product</button>
-    </div>
+    </section>
   );
 }
 

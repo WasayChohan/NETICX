@@ -108,7 +108,7 @@ function Service(props) {
   ];
 
   return (
-    <div className="service" id={props.id}>
+    <section className="service" id="service">
       <h1 className="service-h1">Services We Offer</h1>
       <div className="sub-service">
         <Slider {...settings}>
@@ -130,7 +130,7 @@ function Service(props) {
           ))}
         </Slider>
       </div>
-    </div>
+    </section>
   );
 }
 

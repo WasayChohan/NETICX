@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/Images/logo.png";
+import { Link } from "react-scroll";
 import "./Navbar.css";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const location = useLocation(); // Get the current location
-  const navigate = useNavigate(); // For programmatic navigation
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -20,36 +18,9 @@ function Header() {
     setIsMenuOpen(false);
   };
 
-  const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      window.scrollTo({
-        top: element.offsetTop,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  const handleNavClick = (path, id, e) => {
-    e.preventDefault();
-    if (location.pathname === "/") {
-      handleScroll(id);
-    } else {
-      navigate("/");
-      setTimeout(() => handleScroll(id), 300);
-    }
-    closeMenu();
-  };
-
   const handleScrollVisibility = () => {
     const scrollY = window.scrollY;
-    if (scrollY > lastScrollY) {
-      // Scrolling down
-      setIsVisible(false);
-    } else {
-      // Scrolling up
-      setIsVisible(true);
-    }
+    setIsVisible(scrollY <= lastScrollY || scrollY < 100);
     setLastScrollY(scrollY);
   };
 
@@ -73,46 +44,83 @@ function Header() {
 
         <ul className="navbar-ul">
           <li className="navbar-li">
-            <NavLink to="/" onClick={(e) => handleNavClick("/", "home", e)}>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-15} // Adjust offset for Home section
+              duration={500}
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
+            >
               Home
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/service"
-              onClick={(e) => handleNavClick("/", "service", e)}
+            <Link
+              to="service"
+              spy={true}
+              smooth={true}
+              offset={-10} // Adjust offset for Services section
+              duration={500}
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
             >
               Services
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/whoweare"
-              onClick={(e) => handleNavClick("/", "whoweare", e)}
+            <Link
+              to="whoweare"
+              spy={true}
+              smooth={true}
+              offset={-6} // Adjust offset for Who We Are section
+              duration={500}
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
             >
               Who We Are
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/products"
-              onClick={(e) => handleNavClick("/", "products", e)}
+            <Link
+              to="products"
+              spy={true}
+              smooth={true}
+              offset={-20} // Adjust offset for Products section
+              duration={500}
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
             >
               Products
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink
-              to="/approach"
-              onClick={(e) => handleNavClick("/", "approach", e)}
+            <Link
+              to="approach"
+              spy={true}
+              smooth={true}
+              offset={-20} // Adjust offset for Approach section
+              duration={500}
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
             >
               Approach
-            </NavLink>
+            </Link>
           </li>
           <li>
-            <NavLink to="/portfolio" onClick={closeMenu}>
+            <Link
+              to="portfolio"
+              smooth={true}
+              duration={500}
+              offset={-70} // Adjust offset for Portfolio section
+              onClick={closeMenu}
+              activeClass="active" // Specify the active class
+            >
               Portfolio
-            </NavLink>
+            </Link>
+
+            {/* <NavLink to="/portfolio">Portfolio</NavLink> */}
           </li>
         </ul>
 
