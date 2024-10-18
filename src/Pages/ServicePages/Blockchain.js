@@ -5,26 +5,44 @@ import servicewebdev from "./ServiceImg/service-webdev.jpg";
 function Blockchain() {
   return (
     <div className="service-pages">
-      <div className="services-pages-layout">
-        <div className="service-pages-img">
-          {" "}
-          <img src={servicewebdev} alt="" />{" "}
-        </div>
-        <div className="service-pages-text">
-          <h1>Web Development</h1>
+      <div className="wraper">
+        <img src={servicewebdev} alt="" />
+        <div className="pages-text-box">
+          <h2>Block Chain</h2>
           <p>
-            "At NETICX, we specialize in delivering custom web solutions
-            tailored to your unique business needs. Our experienced developers
-            utilize the latest technologies to create robust, user-friendly
-            websites that engage your audience and drive results. From custom
-            website development and e-commerce solutions to responsive designs
-            and content management systems, we ensure your site looks and
-            functions beautifully on all devices. Our services also include
-            performance optimization for fast loading speeds and ongoing
-            maintenance and support to keep your website up-to-date. Partner
-            with us to elevate your online presence and create a digital
-            experience that sets you apart from the competition. Contact NETICX
-            today to learn how we can help your business thrive online!"
+            At Neticx, we offer comprehensive blockchain development services
+            that empower businesses to harness the transformative potential of
+            decentralized technology. Our expertise in blockchain helps
+            companies streamline transactions, improve security, and foster
+            transparency across various operations. Whether you’re looking to
+            create a custom blockchain solution, develop smart contracts, or
+            implement a secure cryptocurrency system, Neticx delivers innovative
+            solutions that meet the evolving demands of the digital economy.
+            <br /> <br />
+            Blockchain technology at Neticx is about more than just
+            cryptocurrency; it’s about revolutionizing how businesses operate.
+            Our blockchain solutions can be integrated across industries like
+            finance, healthcare, supply chain, and more, providing immutable,
+            tamper-proof ledgers that improve data integrity and trust between
+            stakeholders. By decentralizing processes, we eliminate the need for
+            intermediaries, reducing costs and increasing efficiency for your
+            business. <br /> <br />
+            Security is a key advantage of blockchain, and at Neticx, we
+            prioritize this in every solution we build. Our blockchain
+            applications are designed to provide top-level encryption, ensuring
+            that your transactions and data remain safe from breaches or fraud.
+            Additionally, we develop smart contracts that automatically execute
+            when certain conditions are met, adding an extra layer of efficiency
+            and security to business agreements and processes. <br />
+            <br />
+            With Neticx’s blockchain services, you’re not just adopting a new
+            technology – you’re paving the way for the future. Our team of
+            blockchain experts works with you to understand your business needs
+            and tailor solutions that align with your goals. Whether it’s
+            building decentralized applications (dApps), creating a new token,
+            or implementing blockchain for supply chain transparency, we provide
+            end-to-end solutions that position your business at the forefront of
+            digital innovation.
           </p>
         </div>
       </div>

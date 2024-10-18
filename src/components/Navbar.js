@@ -124,9 +124,9 @@ function Header() {
           </li>
         </ul>
 
-        <Link to="/contact" className="contact-btn-link">
+        <NavLink to="/contact" className="contact-btn-link">
           <button className="nav_contact_button">Contact us</button>
-        </Link>
+        </NavLink>
       </nav>
       <div className="menu_icon" onClick={toggleMenu}>
         <MenuIcon />

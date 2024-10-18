@@ -5,26 +5,45 @@ import servicewebdev from "./ServiceImg/service-webdev.jpg";
 function Ai() {
   return (
     <div className="service-pages">
-      <div className="services-pages-layout">
-        <div className="service-pages-img">
-          {" "}
-          <img src={servicewebdev} alt="" />{" "}
-        </div>
-        <div className="service-pages-text">
-          <h1>Web Development</h1>
+      <div className="wraper">
+        <img src={servicewebdev} alt="" />
+        <div className="pages-text-box">
+          <h2>AI Services</h2>
           <p>
-            "At NETICX, we specialize in delivering custom web solutions
-            tailored to your unique business needs. Our experienced developers
-            utilize the latest technologies to create robust, user-friendly
-            websites that engage your audience and drive results. From custom
-            website development and e-commerce solutions to responsive designs
-            and content management systems, we ensure your site looks and
-            functions beautifully on all devices. Our services also include
-            performance optimization for fast loading speeds and ongoing
-            maintenance and support to keep your website up-to-date. Partner
-            with us to elevate your online presence and create a digital
-            experience that sets you apart from the competition. Contact NETICX
-            today to learn how we can help your business thrive online!"
+            At Neticx, we offer cutting-edge AI services designed to help
+            businesses leverage the power of artificial intelligence for
+            automation, decision-making, and enhanced customer experiences. Our
+            AI solutions are tailored to meet your unique needs, from predictive
+            analytics to natural language processing, allowing you to streamline
+            operations and stay ahead in today’s competitive market. By
+            integrating AI into your workflows, we empower your business to make
+            data-driven decisions, optimize processes, and improve overall
+            efficiency.
+            <br /> <br />
+            Our UX/UI design services at Neticx are built around user-centered
+            design principles. We conduct in-depth research and user testing to
+            understand the needs and pain points of your target audience,
+            ensuring that the final product is not only visually appealing but
+            also highly functional. From wireframes to high-fidelity prototypes,
+            our design process emphasizes clarity, ease of navigation, and
+            overall user satisfaction, making sure that every interaction feels
+            effortless. <br /> <br />
+            At Neticx, we understand that AI is transforming industries, and
+            we’re here to help you navigate this technological shift. Our AI
+            services not only automate routine tasks but also provide deeper
+            insights through data analysis, allowing your team to focus on more
+            strategic activities. From automating data entry to enhancing fraud
+            detection systems, we help businesses implement AI in ways that
+            improve productivity, reduce costs, and increase profitability.
+            <br />
+            <br />
+            We also prioritize responsible AI development at Neticx, ensuring
+            that the systems we build are transparent, ethical, and aligned with
+            industry standards. We believe in creating AI solutions that are not
+            only powerful but also reliable and trustworthy. Whether you're
+            looking to enhance your current capabilities or explore new
+            AI-driven opportunities, our team is here to guide you through the
+            AI revolution with solutions that are tailored to your needs.
           </p>
         </div>
       </div>

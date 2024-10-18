@@ -1,18 +1,13 @@
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar.js";
-import Home from "./Pages/Home.js";
-import Service from "./Pages/Service.js";
-import WhoWeAre from "./Pages/WhoWeAre.js";
+// import Home from "./Pages/Home.js";
+// import Service from "./Pages/Service.js";
+// import WhoWeAre from "./Pages/WhoWeAre.js";
 import Footer from "./components/Footer.js";
-import OurCaseStudy from "./Pages/OurCaseStudy.js";
-import Approach from "./Pages/Approach.js";
+// import OurCaseStudy from "./Pages/OurCaseStudy.js";
+// import Approach from "./Pages/Approach.js";
 import Portfolio from "./Pages/Portfolio.js";
 import Webdev from "./Pages/ServicePages/Webdev.js";
 import Graphic from "./Pages/ServicePages/Graphic.js";
@@ -28,12 +23,13 @@ import HmsCaseStudy from "./Pages/ProjectCaseStudy/HmsCaseStudy.js";
 import HrmCaseStudy from "./Pages/ProjectCaseStudy/HrmCaseStudy.js";
 import CaribbeanCaseStudy from "./Pages/ProjectCaseStudy/CaribbeanCaseStudy.js";
 
-import Sponsor from "./components/Sponsor.js";
-import Review from "./components/Review.js";
+// import Sponsor from "./components/Sponsor.js";
+// import Review from "./components/Review.js";
 
-import Design from "./components/Design.js";
-import Success from "./components/Success.js";
-import TechStack from "./components/TechStack.js";
+// import Design from "./components/Design.js";
+// import Success from "./components/Success.js";
+// import TechStack from "./components/TechStack.js";
+// import BarLayout from "./components/BarLayout.js";
 import Main from "./Pages/Main.js";
 
 // const RenderSections = () => {
@@ -62,6 +58,7 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+
         {/* <Main /> */}
 
         <Routes>
