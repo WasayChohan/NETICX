@@ -1,8 +1,8 @@
 import React from "react";
 import "./OurCaseStudy.css";
-import img18 from "../assets/Images/img18.png";
-import youtube from "../assets/Images/youtube.webp";
-import amazon from "../assets/Images/amazon.jpg";
+import hms from "../assets/Images/hms.PNG";
+import hrm from "../assets/Images/hrm.PNG";
+import caribbeans from "../assets/Images/caribbeans.PNG";
 import { ArrowForwardIos } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function Products(props) {
   const product = [
     {
       id: 1,
-      img: youtube,
+      img: hms,
       product_text_h1: "HMS",
       product_p1:
         " The Hospital Management System (HMS) by SalesEmerge is a user-friendly platform designed to help hospitals manage everyday tasks more efficiently. It includes tools for patient registration, billing, scheduling appointments, and maintaining medical records. The system makes it easier for hospitals to organize their operations, leading to better patient care and smoother workflow.",
@@ -18,7 +18,7 @@ function Products(props) {
     },
     {
       id: 1,
-      img: amazon,
+      img: hrm,
       product_text_h1: "HRM",
       product_p1:
         "The Human Resource Management System (HRM) by SalesEmerge helps organizations manage their employees easily. It covers important tasks like tracking attendance, processing payroll, and evaluating performance. This system makes HR activities smoother and improves how companies manage their workforce. ",
@@ -27,7 +27,7 @@ function Products(props) {
     },
     {
       id: 1,
-      img: img18,
+      img: caribbeans,
       product_text_h1: "CARIBBEANS CONNECTS",
       product_p1:
         "Caribbeans Connects is an online platform that helps creatives like models, musicians, and photographers from the Caribbean, UK, and beyond connect with global opportunities. It allows them to showcase their talents and find collaborations or jobs worldwide. To join, users can simply register on the site and start connecting",
