@@ -119,14 +119,22 @@
 
 .product-btn {
   padding: 14px 25px;
-  border: 0;
   border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
   border: 2px solid #d80e0e;
+  font-weight: 600;
   background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  color: #000000;
 
   margin: 35px 0;
+}
+
+.product-btn:hover {
+  box-shadow: inset 400px 0 0 0 #d80e0e;
+  color: white;
 }
 
 .arrow-icon {
